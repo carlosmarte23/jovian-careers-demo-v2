@@ -10,33 +10,70 @@
       crossorigin="anonymous"
     />
     <title>Jovian Careers</title>
+    <style>
+      h1 {
+        font-size: 40px;
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb(50, 100, 100);
+        text-align: center;
+      }
+      #banner {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }
+      h2 {
+        font-size: 32px;
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb(100, 100, 100);
+        text-align: center;
+      }
+      .bodytext {
+        font-size: 20px;
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb(50, 100, 100);
+        text-align: center;
+      }
+      #container {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
-    <h1>Jovian Careers</h1>
-    <img
-      src="../static/banner.jpeg"
-      alt="banner art that says Do something great"
-      height="320"
-    />
-    <h2>About Jovian</h2>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates animi
-      suscipit sit expedita rerum sapiente officiis exercitationem, quas
-      perferendis quibusdam fuga. Voluptatem provident, rem ipsa natus vel
-      voluptate ullam optio! Modi accusantium nesciunt non exercitationem iure
-      fugiat veritatis blanditiis assumenda quidem? Vitae quidem quasi
-      architecto dolor eos. Adipisci placeat culpa, voluptates maxime mollitia,
-      vitae repudiandae doloremque nulla quas, modi corporis. Eius pariatur
-      beatae atque numquam quam deleniti officia obcaecati distinctio blanditiis
-      ex, mollitia cum reiciendis neque aperiam facere quos minima eaque
-      accusamus deserunt sequi dolore perferendis laborum? Cupiditate, ea illo.
-      Quisquam labore, temporibus animi magnam odio corrupti quo officia rerum
-      tempore officiis incidunt magni possimus aperiam consequuntur deserunt
-      iure aut suscipit laborum, perspiciatis praesentium soluta qui itaque
-      molestiae ratione. Culpa?
-    </p>
-    <h2>Open Positions</h2>
-    <p>Todo - Show the positions</p>
-    <button>Contact Us</button>
+    <div id="container">
+      <h1>Jovian Careers</h1>
+      <img
+        id="banner"
+        src="../static/banner.jpeg"
+        alt="banner art that says Do something great"
+      />
+      <h2>About Jovian</h2>
+      <p class="bodytext">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+        animi suscipit sit expedita rerum sapiente officiis exercitationem, quas
+        perferendis quibusdam fuga. Voluptatem provident, rem ipsa natus vel
+        voluptate ullam optio! Modi accusantium nesciunt non exercitationem iure
+        fugiat veritatis blanditiis assumenda quidem? Vitae quidem quasi
+        architecto dolor eos. Adipisci placeat culpa, voluptates maxime
+        mollitia, vitae repudiandae doloremque nulla quas, modi corporis. Eius
+        pariatur beatae atque numquam quam deleniti officia obcaecati distinctio
+        blanditiis ex, mollitia cum reiciendis neque aperiam facere quos minima
+        eaque accusamus deserunt sequi dolore perferendis laborum? Cupiditate,
+        ea illo. Quisquam labore, temporibus animi magnam odio corrupti quo
+        officia rerum tempore officiis incidunt magni possimus aperiam
+        consequuntur deserunt iure aut suscipit laborum, perspiciatis
+        praesentium soluta qui itaque molestiae ratione. Culpa?
+      </p>
+      <h2>Open Positions</h2>
+      <p class="bodytext">Todo - Show the positions</p>
+      <div style="text-align: center">
+        <button>Contact Us</button>
+        <p>Copyright 2022, Jovian</p>
+      </div>
+    </div>
   </body>
 </html>

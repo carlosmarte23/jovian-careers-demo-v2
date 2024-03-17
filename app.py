@@ -14,6 +14,17 @@ JOBS = [
     "title": "Data Scientist",
     "location": "Delhi, India",
     "salary": "Rs. 15,00,000",
+  },
+  {
+    "id": 3,
+    "title": "Front End Engineer",
+    "location": "San Francisco, USA",
+  },
+  {
+    "id": 4,
+    "title": "Back End Engineer",
+    "location": "Remote",
+    "salary": "Rs. 14,00,000",
   }
 ]
 

@@ -13,37 +13,51 @@
       #banner {
         height: 360px;
         width: 100%;
+        background-size: cover;
+        background-position: center;
       }
     </style>
     <title>Jovian Careers</title>
   </head>
   <body>
     {% include 'navbar.html' %}
+    <img
+      class="img-fluid"
+      id="banner"
+      src="../static/banner.jpeg"
+      alt="banner art that says Do something great"
+      style="margin-bottom: 16px"
+    />
     <div class="container">
       <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
-      <img
-        class="img-fluid"
-        id="banner"
-        src="../static/banner.jpeg"
-        alt="banner art that says Do something great"
-      />
       <h2 class="text-center mt-2 mb-4">About Jovian</h2>
-      <p class="lead">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-        animi suscipit sit expedita rerum sapiente officiis exercitationem, quas
-        perferendis quibusdam fuga. Voluptatem provident, rem ipsa natus vel
-        voluptate ullam optio! Modi accusantium nesciunt non exercitationem iure
-        fugiat veritatis blanditiis assumenda quidem? Vitae quidem quasi
-        architecto dolor eos. Adipisci placeat culpa, voluptates maxime
-        mollitia, vitae repudiandae doloremque nulla quas, modi corporis. Eius
-        pariatur beatae atque numquam quam deleniti officia obcaecati distinctio
-        blanditiis ex, mollitia cum reiciendis neque aperiam facere quos minima
-        eaque accusamus deserunt sequi dolore perferendis laborum? Cupiditate,
-        ea illo. Quisquam labore, temporibus animi magnam odio corrupti quo
-        officia rerum tempore officiis incidunt magni possimus aperiam
-        consequuntur deserunt iure aut suscipit laborum, perspiciatis
-        praesentium soluta qui itaque molestiae ratione. Culpa?
-      </p>
+      <div class="row align-items-center">
+        <p class="lead col-md-6">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+          animi suscipit sit expedita rerum sapiente officiis exercitationem,
+          quas perferendis quibusdam fuga. Voluptatem provident, rem ipsa natus
+          vel voluptate ullam optio! Modi accusantium nesciunt non
+          exercitationem iure fugiat veritatis blanditiis assumenda quidem?
+          Vitae quidem quasi architecto dolor eos. Adipisci placeat culpa,
+          voluptates maxime mollitia, vitae repudiandae doloremque nulla quas,
+          modi corporis. Eius pariatur beatae atque numquam quam deleniti
+          officia obcaecati distinctio blanditiis ex, mollitia cum reiciendis
+          neque aperiam facere quos minima eaque accusamus deserunt sequi dolore
+          perferendis laborum? Cupiditate, ea illo. Quisquam labore, temporibus
+          animi magnam odio corrupti quo officia rerum tempore officiis incidunt
+          magni possimus aperiam consequuntur deserunt iure aut suscipit
+          laborum, perspiciatis praesentium soluta qui itaque molestiae ratione.
+          Culpa?
+        </p>
+        <div class="d-none d-md-block col-md-6">
+          <img
+            src="./static/people.jpg"
+            alt="people working in an office."
+            style="height: 360px; border-radius: 4px"
+          />
+        </div>
+      </div>
+
       <h2 class="text-center mt-2 mb-4">Job Openings</h2>
       <div>{% for job in jobs %} {% include 'jobitem.html' %} {% endfor %}</div>
       <div class="text-center">

@@ -44,20 +44,7 @@
         praesentium soluta qui itaque molestiae ratione. Culpa?
       </p>
       <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-      <div>
-        {% for job in jobs %}
-        <div style="margin-bottom: 16px">
-          <h4 style="color: rgb(128, 128, 128); margin-bottom: 4px">
-            {{job["title"]}}
-          </h4>
-          <div><b>Location:</b> {{job["location"]}}</div>
-          <div>
-            {% if 'salary' in job%}
-            <b>Salary:</b> {{job["salary"]}} {% endif %}
-          </div>
-        </div>
-        {% endfor %}
-      </div>
+      <div>{% for job in jobs %} {% include 'jobitem.html' %} {% endfor %}</div>
       <div class="text-center">
         <button class="btn btn-primary btn-lg">Contact Us</button>
         <p class="mt-4">Copyright 2022, Jovian</p>

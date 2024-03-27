@@ -10,7 +10,9 @@ def hello():
 
 @app.route("/api/jobs")
 def get_jobs():
-  return jsonify(load_jobs_from_db())
+  jobs = load_jobs_from_db()
+  results = [dict(r) for r in jobs]
+  return jsonify(results)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)

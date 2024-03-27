@@ -1,6 +1,9 @@
 from sqlalchemy import create_engine, text
+import os
+from dotenv import load_dotenv
 
-db_connection_string = 'mysql+pymysql://root:root@localhost:3306/joviancareers'
+load_dotenv()
+db_connection_string = os.getenv("DATABASE_URL")
 engine = create_engine(db_connection_string)
 
 def load_jobs_from_db():

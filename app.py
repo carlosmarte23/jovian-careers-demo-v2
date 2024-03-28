@@ -16,7 +16,10 @@ def get_jobs():
 @app.route("/job/<id>")
 def show_job(id):
   job = load_job_from_db(id)
-  return jsonify(job)
+  if job is None:
+    return "Not found", 404
+  else:
+    return render_template("jobpage.html", job=job)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)

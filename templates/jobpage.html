@@ -2,18 +2,22 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css" />
+    {% include 'bootstrap.html' %}
     <title>{{ job.title }} - Jovian Careers</title>
   </head>
   <body>
-    <h3>Title</h3>
-    <p>{{job.title}}</p>
-    <h3>Location</h3>
-    <p>{{job.location}}</p>
-    <h3>Salary</h3>
-    <p>{{job.salary}}</p>
-    <h3>Responsabilities</h3>
-    <p>{{job.responsabilities}}</p>
-    <h3>Requirements</h3>
-    <p>{{job.requirements}}</p>
+    {% include 'navbar.html' %} {% include 'banner.html' %}
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
+      <h4 class="mb-2">{{job.title}}</h4>
+      <p class="lead mt-0">{{job.location}}</p>
+      <h4>Responsabilities</h4>
+      <p>{{job.responsabilities}}</p>
+      <h4>Requirements</h4>
+      <p>{{job.requirements}}</p>
+      <h4>Salary</h4>
+      <p>{{job.salary}}</p>
+    </div>
+    {% include 'footer.html' %}
   </body>
 </html>

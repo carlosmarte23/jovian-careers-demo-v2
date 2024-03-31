@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Submitted</title>
+    {% include 'bootstrap.html' %}
+  </head>
+  <body>
+    {% include 'navbar.html' %} {% include 'banner.html' %}
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
+
+      <p class="mb-4">
+        Your application for the role of <b>{{job.title}}</b> at Jovian has been
+        submitted.
+      </p>
+
+      <b>Full Name</b>
+      <div class="mb-2">{{application['full_name']}}</div>
+
+      <b>Email</b>
+      <div class="mb-2">{{application['email']}}</div>
+
+      <b>Education</b>
+      <div class="mb-2">{{application['education']}}</div>
+
+      <b>LinkedIn URL</b>
+      <div class="mb-2">{{application['linkedin_url']}}</div>
+
+      <b>Work Experience</b>
+      <div class="mb-2">{{application['work_experience']}}</div>
+
+      <b>Resume URL</b>
+      <div class="mb-2">{{application['resume_url']}}</div>
+    </div>
+
+    {% include 'footer.html' %}
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

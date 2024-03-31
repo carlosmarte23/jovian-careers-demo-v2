@@ -1,0 +1,57 @@
+<h1>Application Form</h1>
+
+<form action="/job/{{job.id}}/apply" method="POST">
+  <div>
+    <label for="full_name">Full Name</label> <br />
+    <input
+      type="text"
+      name="full_name"
+      id="full_name"
+      placeholder="Bruce Wayne"
+    />
+  </div>
+  <br />
+  <div>
+    <label for="email">Email</label> <br />
+    <input type="email" name="email" id="email" placeholder="dummy@email.com" />
+  </div>
+  <br />
+  <div>
+    <label for="linkedin">LinkedIn</label> <br />
+    <input
+      type="text"
+      name="linkedin_url"
+      id="linkedin_url"
+      placeholder="linkedin.com/brucewayne"
+    />
+  </div>
+  <br />
+
+  <div>
+    <label for="education">Education</label>
+    <br />
+    <textarea name="education" id="education" cols="30" rows="5"></textarea>
+  </div>
+  <br />
+
+  <div>
+    <label for="work_experience">Work Experience</label>
+    <br />
+    <textarea
+      name="work_experience"
+      id="work_experience"
+      cols="30"
+      rows="5"
+    ></textarea>
+  </div>
+  <br />
+
+  <div>
+    <label for="resume_url">Resume</label>
+    <br />
+    <input type="text" name="resume_url" id="resume_url" placeholder="https://example.com/resume.pdf"></input>
+  </div>
+
+  <br />
+  <input type="submit" value="Submit" />
+</form>

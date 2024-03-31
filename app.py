@@ -21,6 +21,14 @@ def show_job(id):
   else:
     return render_template("jobpage.html", job=job)
 
+@app.route("/api/job/<id>")
+def get_job(id):
+  job = load_job_from_db(id)
+  if job is None:
+    return "Not found", 404
+  else:
+    return jsonify(job)
+  
 @app.route("/job/<id>/apply", methods=["POST"])
 def apply_job(id):
   job = load_job_from_db(id)
@@ -28,7 +36,7 @@ def apply_job(id):
   data = request.form
   print("Form data:", data)
   add_application_to_db(id, data)
-  # Send email
+  # TODO: Send email
   # Acknowledgement submition
   return render_template("application_submitted.html", application=data, job=job)
 
